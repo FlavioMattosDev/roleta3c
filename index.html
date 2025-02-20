@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princípios de Liderança</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/principios.png" alt="Princípios 3 corações" class="logo">
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-blocks">
+                <div class="text-block">
+                    <h1>Como usar?</h1>
+                    <div class="instructions">
+                        <p>1. Escolha o Princípio de Liderança a ser reforçado e inicie a reunião sorteando um
+                            colaborador com a roleta.</p>
+                        <p>2. Inclua o nome dos participantes no campo “Colaboradores participantes”.</p>
+                        <p>3. O colaborador sorteado lê o Princípio e dá exemplo de uma decisão tomada ou não com base
+                            nele.</p>
+                        <p>4. Ao final da reunião, faça um novo sorteio e peça para o sorteado evidenciar, por meio de
+                            exemplos, se os Princípios foram praticados ou não durante a reunião.</p>
+                    </div>
+                </div>
+
+                <div class="roulette-block">
+                    <div class="container">
+                        <div class="input-section">
+                            <textarea id="choices-input" placeholder="Colaboradores Participantes"></textarea>
+                            <button id="add-choices">Adicionar Nomes</button>
+                        </div>
+                        <div class="wheel-container">
+                            <canvas id="wheel" width="500" height="500"></canvas>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="button-group">
+                            <button id="edit">Editar</button>
+                            <button id="spin">Sortear</button>
+                        </div>
+                    </div>
+                    <div id="resultModal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="modalResult"></p>
+                            <div class="modal-buttons">
+                                <button id="btn-excluir">Remover Sorteado</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="editModal" class="edit-modal">
+        <div class="modal-content">
+            <span class="close-edit">&times;</span>
+            <h2>Editar Participantes</h2>
+            <ul id="participantsList"></ul>
+        </div>
+    </div>
+</body>
+
+</html>
