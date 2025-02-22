@@ -54,7 +54,7 @@ header {
 .text-block {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
-  padding: 40px;
+  padding: 0px 40px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -64,7 +64,13 @@ header {
   margin-bottom: 2rem;
   border-bottom: 3px solid rgb(166, 166, 166);
   padding-bottom: 1rem;
-  text-align: center;
+  text-align:center;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .instructions p {
@@ -84,13 +90,6 @@ header {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   min-height: 500px;
 }
-
-/* .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-} */
 
 .input-section {
   width: 100%;
@@ -237,7 +236,7 @@ header {
 }
 
 #modalResult {
-  font-size: 32px !important; /* Forçar tamanho */
+  font-size: 32px !important;
   text-align: center;
   margin: 24px 0;
 }
@@ -329,29 +328,6 @@ header {
   border-radius: 5px;
 }
 
-.edit-buttons {
-  display: flex;
-  gap: 8px;
-}
-
-.edit-name-btn {
-  background: #3498db;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.remove-name-btn {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 .close-edit {
   position: absolute;
   top: 16px;
@@ -360,6 +336,70 @@ header {
   color: #666;
   cursor: pointer;
   transition: color 0.2s;
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .container {
+    max-width: 1000px;
+    padding: 15px;
+  }
+
+  .content-blocks {
+    width: 110%;
+    gap: 25px;
+    margin-top: 1rem;
+  }
+
+  .text-block {
+    padding: 10px 30px;
+  }
+
+  .text-block h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .instructions p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .roulette-block {
+    min-height: auto;
+    padding: 0 20px;
+  }
+
+  .wheel-container {
+    width: 55%;
+    height: 55%;
+  }
+
+  #wheel {
+    width: 90%;
+    height: 90%;
+  }
+
+  .button-group {
+    margin-top: 15px;
+  }
+}
+
+@media (max-height: 900px) {
+  .content-blocks {
+    grid-template-columns: 1fr 1fr;
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+  
+  .logo {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
